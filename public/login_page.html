@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="google-signin-client_id" content="685995173435-nnba34pg0lbmnsd0uvt5d6edat717ktl.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .data{
+            display: none;
+        }
+    </style>
+</head>
+
+<body class-"body-control"><center>
+<div class="inner-body-control">
+    <h1 class="title-text">Welcome to AggiePass</h1>
+    <h3 class="title-text">The easy way to buy and sell sports passes</h3>
+    <center><div class="g-signin2" data-onsuccess="onSignIn" padding=10%></div></center>
+    
+    <center><div class="data"><div class="profile-area">
+        <h3>Is the below information correct?</h3>
+        <h4>NOTE: You must be signed in with a TAMU account</h4>
+        <img id="pic" class="img-circle" width="50" height="50"/>
+        <br>
+        <br>
+        <div>Email Address:</div>
+        <div id="email" class="alert alert-danger"></div>
+        <br>
+        <div>Name:</div>
+        <div id="name"></div>
+        <br>
+        <button id="proceed-button" class="proceed-button"><a href="index.html">Yes, Go to AggiePass</a></button><br>
+        <div class="form-error-text" color="red" id="invalid-email-text">Please sign in with a valid TAMU account</div>
+        <button onclick="signOut()" class="btn btn-danger" class="proceed-button">Sign Out and Try Again</button>
+        
+    </div></div></center>
+</div></center>
+    <script>
+        var profile;
+        function onSignIn(googleUser) {
+            profile = googleUser.getBasicProfile();
+            $(".g-signin2").css("display","none");
+            $(".data").css("display","block");
+            $("#pic").attr('src', profile.getImageUrl());
+            $("#email").text(profile.getEmail());
+            console.log("profile: ",profile);
+            $("#name").text(profile.getName());
+            let user_profile = {};
+            user_profile.email = profile.getEmail();
+            user_profile.name = profile.getName();
+            if(!user_profile.email.includes("@tamu.edu")){
+                document.getElementById("proceed-button").style.visibility = "hidden";
+                document.getElementById("invalid-email-text").style.visibility = "visible";
+            } else {
+                document.getElementById("proceed-button").style.visibility = "visible";
+                document.getElementById("invalid-email-text").style.visibility = "hidden";
+            }
+            sessionStorage.setItem('user_profile',JSON.stringify(user_profile));
+            // getSportsData(function(results){
+            //     sessionStorage.setItem('sports_data',results);
+            //     console.log("here");
+            //     console.log(sessionStorage.getItem('sports_data'));
+            // });
+
+        }
+        
+        
+        function signOut(){
+            sessionStorage.removeItem('user-profile');
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function(){
+                $(".g-signin2").css("display","block");
+                $(".data").css("display","none");
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.title-text {
+    text-align: center;
+}
+
+.inner-body-control {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 2%;
+    align-self: center;
+    max-width: 50%;
+}
+
+body {
+    background-image:url("kyle-field.jpg");
+}
+
+.profile-area {
+    background-color: #D6D3C4;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.proceed-button {
+    background-color: #FFFFFF;
+    color: #500000;
+}
+
+a:visited {
+    color:#500000;
+}
+
+
+.proceed-map {
+    background-color: #FFFFFF;
+    color: #500000;
+    font-size: 150%;
+}
+
+.map-title {
+    color: #FFFFFF;
+    text-align: center;
+}

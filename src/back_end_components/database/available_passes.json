@@ -1,0 +1,50 @@
+{
+  "max_id": 4,
+  "passes": [
+    {
+      "id": 0,
+      "seller_name": "Nick Johnson",
+      "seller_email": "nickmj1999@tamu.edu",
+      "price": 20.0,
+      "class": "U4",
+      "game": "Alabama",
+      "handicap": 0
+    },
+    {
+      "id": 1,
+      "seller_name": "Marc Riccione",
+      "seller_email": "nickmj1999@tamu.edu",
+      "price": 50.0,
+      "class": "U3",
+      "game": "Alabama",
+      "handicap": 1
+    },
+    {
+      "id": 2,
+      "seller_name": "Josh Bowie",
+      "seller_email": "nickmj1999@tamu.edu",
+      "price": 29.99,
+      "class": "U4",
+      "game": "LSU",
+      "handicap": 0
+    },
+    {
+      "id": 3,
+      "seller_name": "Morris Lin",
+      "seller_email": "nickmj1999@tamu.edu",
+      "price": 99.99,
+      "class": "U3",
+      "game": "LSU",
+      "handicap": 0
+    },
+    {
+      "id": 4,
+      "seller_name": "Jonathan Labrum",
+      "seller_email": "nickmj1999@tamu.edu",
+      "price": 109.99,
+      "class": "U1",
+      "game": "South Carolina",
+      "handicap": 0
+    }
+  ]
+}

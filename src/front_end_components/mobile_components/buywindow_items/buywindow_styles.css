@@ -1,0 +1,45 @@
+.pass-for-sale {
+    background-color: #D6D3C4;
+    padding: 10px;
+    border-color:black;
+    border-radius: 10px;
+    margin: 10px;
+    color:#500000;
+    text-align: center;
+}
+
+.pass-for-sale-titles {
+    text-align: center;
+    vertical-align: center;
+}
+
+.purchase-button {
+    color: black;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.query-form {
+    background-color: #500000;
+    padding:10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.query-button {
+    width: 100%;
+}
+
+.query-form-title {
+    color: white;
+    text-align: center;
+}
+
+.form-error-text {
+    background-color: white;
+    color:red;
+    text-align: center;
+}
+
+

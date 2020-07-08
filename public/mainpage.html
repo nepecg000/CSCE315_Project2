@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 50%;  /* The width is the width of the web page */
+       }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <center>
+      <h1 class="map-title">Suggested Meetup Locations</h1>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of College Station
+  var csat = {lat: 30.6154468, lng: -96.3401072};
+  var kyleField = {lat: 30.610782, lng: -96.341240};
+  var recCenter = {lat: 30.607905, lng: -96.343141};
+  var rudderFountain = {lat: 30.613516, lng: -96.341138};
+  var evans = {lat: 30.616953, lng: -96.339084};
+  // The map, centered at College Station
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 14, center: csat});
+  // The marker, positioned at College Station
+  var m1 = new google.maps.Marker({position: kyleField, map: map, title: 'Kyle Field'});
+  var m2 = new google.maps.Marker({position: recCenter, map: map, title: 'Rec Center'});
+  var m3 = new google.maps.Marker({position: rudderFountain, map: map, title: 'Rudder Fountain'});
+  var m4 = new google.maps.Marker({position: evans, map: map, title: 'Evans Library'});
+  
+	var infom1 = new google.maps.InfoWindow({content:'<h1>Kyle Field</h1><p>Recommended meeting hours: 8:00am - 8:00pm</p>'});
+	var infom2 = new google.maps.InfoWindow({content:'<h1>Rec Center</h1><p>Recommended meeting hours: 8:00am - 10:00pm</p>'});
+	var infom3 = new google.maps.InfoWindow({content:'<h1>Rudder Fountain</h1><p>Recommended meeting hours: 8:00am - 8:00pm</p>'});
+	var infom4 = new google.maps.InfoWindow({content:'<h1>Evans Library</h1><p>Recommended meeting hours: 7:00am - 12:00am</p>'});
+
+google.maps.event.addListener(m1, 'click', function() {
+  infom2.close();
+  infom3.close();
+  infom4.close();
+  infom1.open(map,m1);
+});
+google.maps.event.addListener(m2, 'click', function() {
+  infom1.close();
+  infom3.close();
+  infom4.close();
+  infom2.open(map,m2);
+});
+google.maps.event.addListener(m3, 'click', function() {
+  infom1.close();
+  infom2.close();
+  infom4.close();
+  infom3.open(map,m3);
+});
+google.maps.event.addListener(m4, 'click', function() {
+  infom1.close();
+  infom2.close();
+  infom3.close();
+  infom4.open(map,m4);
+});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqMfEGYwXwCc1eM7mCiO2eWWzQkWkh00U&callback=initMap">
+    </script>
+<button class="proceed-map"><a href="payment.html">Continue to Payment</a></button>
+</center>
+  </body>
+</html>

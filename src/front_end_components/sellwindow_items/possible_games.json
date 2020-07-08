@@ -1,0 +1,14 @@
+[
+  { "text": "Texas State", "city_zip":"77802", "logo":"texas_state.png" },
+  { "text": "Clemson", "city_zip":"29631", "logo":"clemson.png" },
+  { "text": "Lamar", "city_zip":"77802", "logo":"lamar.jpg" },
+  { "text": "Auburn", "city_zip":"77802", "logo":"auburn.png" },
+  { "text": "Arkansas", "city_zip":"76001", "logo":"arkansas.jpg" },
+  { "text": "Alabama", "city_zip":"77802", "logo":"alabama.png" },
+  { "text": "Mississippi", "city_zip":"38655", "logo":"ole_miss.png" },
+  { "text": "MS State", "city_zip":"77802", "logo":"miss_state.jpg" },
+  { "text": "UTSA", "city_zip":"77802", "logo":"utsa.jpg" },
+  { "text": "South Carolina", "city_zip":"77802", "logo":"south_carolina.png" },
+  { "text": "Georgia", "city_zip":"30601", "logo":"georgia.png" },
+  { "text": "LSU", "city_zip":"70801", "logo":"lsu.jpg" }
+]

@@ -1,0 +1,43 @@
+.tab-styling {
+    width: 100%;
+}
+
+.login-form {
+    max-width: 300px;
+    align-self: center;
+    background-color: #D6D3C4;
+    margin: 5%;
+    border-radius: 10%;
+    
+}
+
+.login-form-forgot {
+   float: right;
+}
+
+.login-form-button {
+   width: 100%;
+}
+
+.login-form-control {
+    align-self: center;
+    vertical-align: center;
+}
+
+.form-error-text {
+    background-color: white;
+    color:red;
+    text-align: center;
+}
+
+.title-text {
+    padding: 2%;
+}
+
+.image-control{
+    max-width: 100%;
+}
+
+body {
+    background-color: #FFFFFF;
+}
